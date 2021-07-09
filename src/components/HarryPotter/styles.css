@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.HarryPotter {
+  width: 100vw;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(228, 228, 228);
+  overflow: hidden;
+  scrollbar-base-color: red;
+}
+
+.section__title {
+  text-transform: capitalize;
+  text-align: center;
+  margin: 20px 0 25px 0;
+
+  color: rgb(72, 168, 168);
+  font-weight: 700;
+  font-size: 30px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.title {
+  color: rgb(72, 168, 168);
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 25px 0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.paragraph {
+  text-align: justify;
+  margin: 10px 0 0 0;
+  color: rgb(34, 34, 34);
+}
+
+.author {
+  margin: 30px 0;
+}
+.resume {
+  margin: 30px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__col-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__col-2 {
+  width: 100%;
+  display: flex;
+}
+
+.image {
+  border-radius: 5px;
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .container__col-1 {
+    width: 50%;
+    padding: 0 20px 0 0;
+  }
+
+  .adjust {
+    padding: 0 0 0 20px;
+  }
+
+  .container__col-2 {
+    width: 50%;
+  }
+
+  .image {
+    margin: 0;
+  }
+}

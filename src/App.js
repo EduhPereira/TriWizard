@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import { Students } from "./components/Students";
+import { WelcomePage } from "./components/WelcomePage";
+import { HarryPotter } from "./components/HarryPotter";
 
 function App() {
+  const [studentArray, setStudentArray] = useState([]);
+
+  const [welcomePage, setWelcomePage] = useState(false);
+
+  useEffect(() => {
+    fetch("https://hp-api.herokuapp.com/api/characters/students")
+      .then((results) => results.json())
+      .then((results) => setStudentArray(results));
+  }, [studentArray]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {welcomePage ? (
+        <Students studentArray={studentArray} setWelcomePage={setWelcomePage} />
+      ) : (
+        <>
+          <WelcomePage setWelcomePage={setWelcomePage} />
+          <HarryPotter />
+        </>
+      )}
     </div>
   );
 }

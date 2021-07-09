@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.StudentCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
+  width: 200px;
+  height: 350px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  text-align: center;
+
+  box-shadow: 15px 13px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 15px 13px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 15px 13px 10px 0px rgba(0, 0, 0, 0.75);
+
+  transition: all 0.3s linear;
+  animation: fromTop 0.7s ease-in;
+}
+.StudentCard:hover {
+  transform: scale(1.1);
+}
+
+.StudentCard__img {
+  width: 100%;
+  height: 250px;
+
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.StudentCard__name {
+  margin: 5px 0 0 0;
+  font-weight: 700;
+  color: #e3e3e3;
+}
+.StudentCard__house {
+  margin: 10px 0;
+  font-weight: 900;
+}
+
+.Slytherin {
+  color: rgb(16, 143, 16);
+}
+.Gryffindor {
+  color: rgb(214, 47, 47);
+}
+.Ravenclaw {
+  color: lightskyblue;
+}
+.Hufflepuff {
+  color: rgb(228, 177, 48);
+}
+
+.Slytherin__border {
+  border: 1px solid rgb(16, 143, 16);
+}
+.Gryffindor__border {
+  border: 1px solid rgb(214, 47, 47);
+}
+.Ravenclaw__border {
+  border: 1px solid lightskyblue;
+}
+.Hufflepuff__border {
+  border: 1px solid rgb(228, 177, 48);
+}
+
+@keyframes fromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

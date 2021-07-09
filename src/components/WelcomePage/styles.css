@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.welcome-page {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+
+  background-image: url("https://i.pinimg.com/originals/75/6b/2b/756b2b2e1a17eaee8d71901f49958c3a.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.welcome-page__title {
+  margin: 35px 0 0 0;
+
+  font-size: 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #e3e3e3;
+
+  animation: appear 1s linear;
+}
+
+.welcome-page__btn {
+  cursor: pointer;
+
+  margin: 0 0 50px 0;
+  border: 1px solid rgb(87, 203, 203);
+  border-radius: 5px;
+  width: 200px;
+  height: 45px;
+
+  background-color: rgb(32, 32, 32);
+
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(87, 203, 203);
+
+  box-shadow: 12px 12px 9px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 12px 12px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 12px 12px 9px 0px rgba(0, 0, 0, 0.75);
+
+  transition: all 0.3s ease;
+  animation: appear 1s linear;
+}
+
+.welcome-page__btn:hover {
+  transform: translateY(-10px);
+  background-color: rgb(48, 48, 48);
+  color: rgb(103, 238, 238);
+}
+
+.btnninfo {
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  color: #e3e3e3;
+  font-size: 80px;
+  text-transform: capitalize;
+  font-weight: 900;
+
+  animation: upndown 1s linear infinite;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes upndown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}

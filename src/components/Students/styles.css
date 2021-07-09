@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.Students {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Press Start 2P", cursive;
+
+  background-image: url("https://www.nawpic.com/media/2020/harry-potter-nawpic-4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(32, 32, 32);
+}
+
+.Students__Title {
+  color: rgb(87, 203, 203);
+  margin: 20px 0;
+  text-transform: capitalize;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 50px 0;
+}
+
+.tryAgainBtn {
+  cursor: pointer;
+
+  margin: 0 0 25px 0;
+  border: 1px solid rgb(87, 203, 203);
+  border-radius: 5px;
+  width: 230px;
+  height: 45px;
+
+  background-color: rgb(32, 32, 32);
+
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(87, 203, 203);
+
+  box-shadow: 12px 12px 9px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 12px 12px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 12px 12px 9px 0px rgba(0, 0, 0, 0.75);
+
+  transition: all 0.3s ease;
+}
+
+.tryAgainBtn:hover {
+  transform: translateY(-10px);
+  background-color: rgb(48, 48, 48);
+  color: rgb(103, 238, 238);
+}
+
+.tryAgainBtn:active {
+  transform: translateY(8px);
+}
+
+@media only screen and (max-width: 500px) {
+  .Students {
+    height: unset;
+  }
+}
